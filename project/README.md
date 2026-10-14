@@ -2,7 +2,7 @@
 
 ## Video Demo
 
-[Watch My AI ChatNova Demo](https://youtu.be/HKyiLu1qtXs)
+[Watch the AI ChatNova Demonstration](https://youtu.be/mH_N4uGfQ5g)
 
 # Description
 
