@@ -1,8 +1,8 @@
 # MY PERSONAL AI AGENT — AI ChatNova
 
-# Video Demo
+## Video Demo
 
-[https://youtu.be/HKyiLu1qtXs]
+[Watch My AI ChatNova Demo](https://youtu.be/HKyiLu1qtXs)
 
 # Description
 
