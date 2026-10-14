@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title>Conversation History</title>
+
+        <link rel="stylesheet" href="/static/style.css">
+
+        <link rel="stylesheet"
+              href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    </head>
+
+    <body>
+
+        <form action="/clear_history" method="post" class="clear">
+            <button type="submit">
+                <i class="fa-solid fa-anchor-circle-xmark"></i>
+            </button>
+        </form>
+
+        <div class="history">
+
+            <h1 class="title">Chat History</h1>
+
+            <a class="direction" href="/">
+                <i class="fa-solid fa-arrow-left-long"></i>
+            </a>
+
+            <hr>
+            <div class="chat">
+
+            {% for conversation in conversations %}
+
+                <h3>Question:</h3>
+                <p>{{ conversation["question"] }}</p>
+
+                <h3>Answer:</h3>
+                <p>{{ conversation["answer"] }}</p>
+
+                <hr>
+
+            {% endfor %}
+            </div>
+
+        </div>
+
+    </body>
+
+</html>

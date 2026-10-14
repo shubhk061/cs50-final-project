@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <title>login</title>
+        <link rel="stylesheet" href="/static/style.css">
+    </head>
+    <body>
+        <form action="/register" method="post" class="register">
+            <div class="mb-3">
+                <input autocomplete="off" autofocus class="form-control mx-auto w-auto" name="email" placeholder="Email" type="email">
+            </div>
+            <div class="mb-3">
+                <input class="form-control mx-auto w-auto" name="password" placeholder="Password" type="password">
+            </div>
+            <div class="mb-3">
+                <input class="form-control mx-auto w-auto" name="confirmation" placeholder="Password (again)" type="password">
+            </div>
+
+            <button class="btn btn-primary" type="submit">Register</button>
+            <p>
+                <a href="/login">Login</a>
+            </p>
+        </form>
+    </body>
+</html>

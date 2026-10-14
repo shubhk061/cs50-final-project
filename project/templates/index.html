@@ -1,0 +1,63 @@
+<html>
+    <head>
+        <title>My Personal AI Agent</title>
+
+        <link rel="stylesheet" href="/static/style.css">
+
+        <link rel="stylesheet"
+              href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    </head>
+
+    <body class="ai-page">
+
+        <div class="chat-area">
+
+            <div class="app-logo">
+                <span> AI ChatNova</span>
+            </div>
+
+            {% if answer %}
+                <div class="answer-box">
+                    <h3>AI Answer:</h3>
+                    <div class="answer">
+                        {{ answer | safe }}
+                    </div>
+                </div>
+            {% endif %}
+
+            <div class="ai-box">
+                <form action="/ask" method="post">
+                    <input type="text"
+                           autofocus
+                           name="question"
+                           placeholder="Ask me something...">
+
+                    <button type="submit">
+                        <i class="fa-regular fa-paper-plane"></i>
+                    </button>
+                </form>
+            </div>
+
+        </div>
+
+        <div class="sidebar">
+
+            <h2>AI Chats</h2>
+
+            <p class="blue">
+                <a href="/history">History</a>
+                <a href="/logout">| logout</a>
+            </p>
+
+            {% for conversation in conversations %}
+                <p>
+                    <a href="/conversation/{{ conversation['id'] }}">
+                        {{ conversation["question"] }}
+                    </a>
+                </p>
+            {% endfor %}
+
+        </div>
+
+    </body>
+</html>

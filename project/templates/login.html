@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <title>login</title>
+        <link rel="stylesheet" href="/static/style.css">
+    </head>
+    <body>
+        <form action="/login" method="post" class="login">
+            <div class="mb-3">
+                <input autocomplete="off" autofocus class="form-control mx-auto w-auto" name="email" placeholder="Email" type="email">
+            </div>
+            <div class="mb-4">
+                <input class="form-control mx-auto w-auto" name="password" placeholder="Password" type="password">
+            </div>
+            <button class="btn btn-primary" type="submit">
+                Log In
+            </button>
+            <div class ="p">
+                <p >
+                    Don't have an account ?
+                    <a href="/register">Register</a>
+                    <a href="/forgot_password">Forgot password?</a>
+                </p>
+            </div>
+        </form>
+
+    </body>
+
+</html>
